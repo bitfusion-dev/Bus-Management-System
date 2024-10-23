@@ -13,6 +13,17 @@
         <header>
             <h1>Automated Bus Management System</h1>
         </header>
+
+        <section class="bus-routes">
+            <h2>Bus Routes</h2>
+            <input type="text" id="search-bar" placeholder="Search Bus Routes..." onkeyup="searchRoutes()" />
+            <ul id="bus-routes-list">
+                <li><strong>Route 1:</strong> Delhi - Haridwar</li>
+                <li><strong>Route 2:</strong> Sonipat - Delhi</li>
+                <li><strong>Route 3:</strong> Delhi - Mumbai</li>
+            </ul>
+        </section>
+        
         
         <section class="add-bus">
             <h2>Add New Bus</h2>
@@ -23,6 +34,8 @@
                 <button type="submit">Add Bus</button>
             </form>
         </section>
+
+
 
         <section class="bus-info">
             <h2>Bus Timings</h2>

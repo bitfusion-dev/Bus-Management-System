@@ -173,3 +173,18 @@ button:active{
     outline: none;
     box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
+
+.welcome-message {
+    background-color: #f0f8ff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message p {
+    font-size: 18px;
+    color: #2c3e50;
+    margin: 0;
+}

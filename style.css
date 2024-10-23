@@ -104,4 +104,8 @@ button:hover {
     border-radius: 5px;
     background-color: #f9f9f9;
 }
+tr:hover{
+    background-color: #e1e1e1;
+    cursor: pointer;
+}
 

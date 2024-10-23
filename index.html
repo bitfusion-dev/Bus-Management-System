@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Bus Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Automated Bus Management System</h1>
+        </header>
+        
+        <section class="add-bus">
+            <h2>Add New Bus</h2>
+            <form id="add-bus-form">
+                <input type="text" id="bus-number" placeholder="Bus Number" required>
+                <input type="text" id="bus-route" placeholder="Route" required>
+                <input type="time" id="departure-time" required>
+                <button type="submit">Add Bus</button>
+            </form>
+        </section>
+
+        <section class="bus-info">
+            <h2>Bus Timings</h2>
+            <table id="bus-timings">
+                <thead>
+                    <tr>
+                        <th>Bus Number</th>
+                        <th>Route</th>
+                        <th>Departure Time</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Downtown - University</td>
+                        <td>08:00 AM</td>
+                        <td><button class="remove-btn">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>University - Mall</td>
+                        <td>08:30 AM</td>
+                        <td><button class="remove-btn">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="bus-routes">
+            <h2>Bus Routes</h2>
+            <ul>
+                <li><strong>Route 1:</strong> Downtown - University</li>
+                <li><strong>Route 2:</strong> University - Mall</li>
+                <li><strong>Route 3:</strong> Mall - Airport</li>
+            </ul>
+        </section>
+
+        <section class="lost-and-found">
+            <h2>Lost and Found</h2>
+            <form id="lost-found-form">
+                <input type="text" id="item" placeholder="Describe the item" required>
+                <input type="text" id="contact" placeholder="Your contact info" required>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="lost-found-items"></div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Automated Bus Management System. All rights reserved.</p>
+    </footer>
+    
+     
+
+    <script src="script.js"></script>
+</body>
+</html>

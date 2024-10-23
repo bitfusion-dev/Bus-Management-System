@@ -19,6 +19,47 @@
         </header>
 
         <section class="bus-routes">
+    <h2>Bus Routes</h2>
+    <input type="text" id="search-bar" placeholder="Search Bus Routes..." onkeyup="searchRoutes()" aria-label="Search Bus Routes" />
+    <ul id="bus-routes-list">
+        <li><strong>Route 1:</strong> Delhi - Haridwar</li>
+        <li><strong>Route 2:</strong> Sonipat - Delhi</li>
+        <li><strong>Route 3:</strong> Delhi - Mumbai</li>
+    </ul>
+</section>
+
+<!-- Crew Management Section -->
+<section class="crew-management">
+    <h2>Crew Management</h2>
+    <form id="add-crew-form">
+        <label for="crew-name">Crew Name</label>
+        <input type="text" id="crew-name" placeholder="Enter Crew Name" required aria-label="Crew Name">
+        
+        <label for="crew-role">Crew Role</label>
+        <input type="text" id="crew-role" placeholder="Role (e.g., Driver, Conductor)" required aria-label="Crew Role">
+        
+        <label for="crew-bus-number">Bus Number</label>
+        <input type="text" id="crew-bus-number" placeholder="Bus Number" required aria-label="Bus Number">
+        
+        <button type="submit" aria-label="Add Crew Member" role="button">Add Crew Member</button>
+    </form>
+    <table id="crew-list">
+        <thead>
+            <tr>
+                <th>Crew Name</th>
+                <th>Role</th>
+                <th>Bus Number</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Crew members will be added here -->
+        </tbody>
+    </table>
+</section>
+
+
+        <section class="bus-routes">
             <h2>Bus Routes</h2>
             <input type="text" id="search-bar" placeholder="Search Bus Routes..." onkeyup="searchRoutes()" />
             <ul id="bus-routes-list">
@@ -121,6 +162,25 @@
                 <!-- Emergency reports will be added here -->
             </div>
         </section>
+
+        <section class="user-feedback">
+            <h2>User Feedback</h2>
+            <form id="feedback-form">
+                <label for="user-name">Name</label>
+                <input type="text" id="user-name" placeholder="Your Name" required aria-label="Name">
+        
+                <label for="feedback-message">Feedback</label>
+                <textarea id="feedback-message" placeholder="Enter your feedback" required aria-label="Feedback Message"></textarea>
+        
+                <button type="submit" aria-label="Submit Feedback" role="button">Submit Feedback</button>
+            </form>
+        
+            <div id="feedback-list">
+                <h3>Recent Feedback</h3>
+                <!-- User feedback will be displayed here -->
+            </div>
+        </section>
+        
         
     </div>
     <footer>

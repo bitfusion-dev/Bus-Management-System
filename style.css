@@ -105,3 +105,16 @@ button:hover {
     background-color: #f9f9f9;
 }
 
+/* Remove yellow highlight from bus timings section */
+tr:hover {
+    background-color: #f1c40f;  /* Remove this line or change color to a neutral color */
+    transition: background-color 0.3s;  /* Smooth transition for hover effect */
+}
+
+/* Change to a neutral color or remove hover effect */
+tr:hover {
+    background-color: #eaeaea; /* Light gray for hover effect */
+    transition: background-color 0.3s;
+}
+
+

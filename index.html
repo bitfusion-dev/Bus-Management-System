@@ -87,6 +87,29 @@
             </form>
             <div id="lost-found-items"></div>
         </section>
+        <section class="crew-management">
+            <h2>Crew Management</h2>
+            <form id="add-crew-form">
+                <input type="text" id="crew-name" placeholder="Crew Name" required>
+                <input type="text" id="crew-role" placeholder="Role (e.g., Driver, Conductor)" required>
+                <input type="text" id="crew-bus-number" placeholder="Bus Number" required>
+                <button type="submit">Add Crew Member</button>
+            </form>
+            <table id="crew-list">
+                <thead>
+                    <tr>
+                        <th>Crew Name</th>
+                        <th>Role</th>
+                        <th>Bus Number</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Crew members will be added here -->
+                </tbody>
+            </table>
+        </section>
+        
     </div>
     <footer>
         <p>&copy; 2024 Automated Bus Management System. All rights reserved.</p>

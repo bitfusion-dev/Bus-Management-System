@@ -61,3 +61,35 @@ function searchRoutes() {
         }
     }
 }
+
+// Crew Management functionality
+document.getElementById('add-crew-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const crewName = document.getElementById('crew-name').value;
+    const crewRole = document.getElementById('crew-role').value;
+    const crewBusNumber = document.getElementById('crew-bus-number').value;
+
+    // Create a new row in the crew list table
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = `<td>${crewName}</td>
+                        <td>${crewRole}</td>
+                        <td>${crewBusNumber}</td>
+                        <td><button class="remove-crew-btn">Remove</button></td>`;
+
+    // Add the new row to the crew list table
+    document.querySelector('#crew-list tbody').appendChild(newRow);
+
+    // Clear the input fields
+    document.getElementById('crew-name').value = '';
+    document.getElementById('crew-role').value = '';
+    document.getElementById('crew-bus-number').value = '';
+});
+
+// Event delegation for removing crew members
+document.querySelector('#crew-list tbody').addEventListener('click', function (e) {
+    if (e.target.classList.contains('remove-crew-btn')) {
+        e.target.closest('tr').remove(); // Remove the corresponding row
+    }
+});
+

@@ -433,4 +433,12 @@ button:active {
     background-color: #e55342;
 }
 
+.emergency-contacts {
+    display: inline-block;
+    
+}
 
+#ambu{
+    margin-left: 240px;
+    margin-right: 200px;
+}

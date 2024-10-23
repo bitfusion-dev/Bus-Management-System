@@ -123,3 +123,17 @@ input {
 }
 
 }
+
+input{
+    margin: 5px 0;
+    padding: 12px;
+    border: 1px  solid #ddd;
+    border-radius: 16px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+input:focus{
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}

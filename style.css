@@ -316,3 +316,121 @@ button:active{
 #add-crew-form button:hover {
     background-color: #218838;
 }
+.emergency-section {
+    margin: 20px 0;
+}
+
+#emergency-form input {
+    margin: 5px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#emergency-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#emergency-form button:hover {
+    background-color: #c82333;
+}
+
+#emergency-reports {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#emergency-reports p {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left: 4px solid #f5c6cb;
+    border-radius: 5px;
+}
+
+/* General Button Styles */
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover and Active States */
+button:hover {
+    background-color: #218838; /* Slightly darker for all buttons */
+    transform: scale(1.05); /* Slight enlarge effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow on hover */
+}
+
+button:active {
+    background-color: #1e7e34; /* Darken on active state */
+    transform: scale(0.97); /* Slight shrink on click */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Reduce shadow */
+}
+
+/* Specific Button Colors for Different Sections */
+
+/* Add Bus Button */
+#add-bus-form button {
+    background-color: #28a745; /* Green for Add Bus */
+}
+
+#add-bus-form button:hover {
+    background-color: #218838;
+}
+
+/* Add Crew Member Button */
+#add-crew-form button {
+    background-color: #007bff; /* Blue for Crew Management */
+}
+
+#add-crew-form button:hover {
+    background-color: #0069d9;
+}
+
+/* Emergency Button */
+#emergency-form button {
+    background-color: #dc3545; /* Red for Emergency */
+}
+
+#emergency-form button:hover {
+    background-color: #c82333;
+}
+
+/* Lost and Found Button */
+#lost-found-form button {
+    background-color: #17a2b8; /* Teal for Lost and Found */
+}
+
+#lost-found-form button:hover {
+    background-color: #138496;
+}
+
+/* Remove Button for Bus and Crew Tables */
+.remove-btn, .remove-crew-btn {
+    background-color: #ff6347; /* Tomato for Remove buttons */
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.remove-btn:hover, .remove-crew-btn:hover {
+    background-color: #e55342;
+}
+
+

@@ -188,3 +188,80 @@ button:active{
     color: #2c3e50;
     margin: 0;
 }
+
+/* Style the bus routes section */
+.bus-routes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#search-bar {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#search-bar:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Flexbox styling for the routes list */
+#bus-routes-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#bus-routes-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Add a hover effect to the list items */
+#bus-routes-list li:hover {
+    background-color: #e1f5fe;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* Text styling for the route list */
+#bus-routes-list li strong {
+    color: #2980b9;
+    font-size: 18px;
+}
+
+#bus-routes-list li span {
+    color: #333;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #bus-routes-list li {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #bus-routes-list li strong,
+    #bus-routes-list li span {
+        font-size: 16px;
+    }
+}

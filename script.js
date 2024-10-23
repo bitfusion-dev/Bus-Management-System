@@ -42,3 +42,22 @@ document.getElementById('lost-found-form').addEventListener('submit', function (
     document.getElementById('item').value = '';
     document.getElementById('contact').value = '';
 });
+
+function searchRoutes() {
+    // Get the search query
+    let input = document.getElementById('search-bar').value.toLowerCase();
+    
+    // Get the list of bus routes
+    let routes = document.getElementById('bus-routes-list').getElementsByTagName('li');
+    
+    // Loop through the routes and hide those that don't match the search query
+    for (let i = 0; i < routes.length; i++) {
+        let route = routes[i].textContent || routes[i].innerText;
+        
+        if (route.toLowerCase().indexOf(input) > -1) {
+            routes[i].style.display = ""; // Show matching routes
+        } else {
+            routes[i].style.display = "none"; // Hide non-matching routes
+        }
+    }
+}

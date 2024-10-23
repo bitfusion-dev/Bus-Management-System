@@ -109,3 +109,17 @@ tr:hover{
     cursor: pointer;
 }
 
+@media (max-width: 600px){
+    .container {
+        padding: 10px;
+    }
+
+table{
+    font-size: 14px;
+}
+
+input {
+    font-size: 14px;
+}
+
+}

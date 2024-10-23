@@ -93,3 +93,21 @@ document.querySelector('#crew-list tbody').addEventListener('click', function (e
     }
 });
 
+// Emergency Section functionality
+document.getElementById('emergency-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const emergencyDescription = document.getElementById('emergency-description').value;
+    const emergencyContact = document.getElementById('emergency-contact').value;
+
+    const emergencyReportsDiv = document.getElementById('emergency-reports');
+    const newReport = document.createElement('p');
+    newReport.innerHTML = `<strong>Emergency:</strong> ${emergencyDescription} - <strong>Contact:</strong> ${emergencyContact}`;
+
+    // Add the new emergency report
+    emergencyReportsDiv.appendChild(newReport);
+
+    // Clear the input fields
+    document.getElementById('emergency-description').value = '';
+    document.getElementById('emergency-contact').value = '';
+});

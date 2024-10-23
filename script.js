@@ -111,3 +111,24 @@ document.getElementById('emergency-form').addEventListener('submit', function (e
     document.getElementById('emergency-description').value = '';
     document.getElementById('emergency-contact').value = '';
 });
+
+// User Feedback functionality
+document.getElementById('feedback-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const userName = document.getElementById('user-name').value;
+    const feedbackMessage = document.getElementById('feedback-message').value;
+
+    // Create a new feedback entry
+    const feedbackList = document.getElementById('feedback-list');
+    const newFeedback = document.createElement('div');
+    newFeedback.classList.add('feedback-entry');
+    newFeedback.innerHTML = `<p><strong>${userName}</strong> says:</p><p>${feedbackMessage}</p>`;
+
+    // Add the new feedback entry to the feedback list
+    feedbackList.appendChild(newFeedback);
+
+    // Clear the input fields
+    document.getElementById('user-name').value = '';
+    document.getElementById('feedback-message').value = '';
+});

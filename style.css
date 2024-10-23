@@ -55,12 +55,14 @@ th {
     color: white;
 }
 
+/* Improved hover effect for table rows */
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
 tr:hover {
-    background-color: #f1c40f;
+    background-color: #f1c40f;  /* Change the color on hover */
+    transition: background-color 0.3s;  /* Smooth transition for hover effect */
 }
 
 form {
@@ -75,11 +77,13 @@ input {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
+    transition: border-color 0.3s;  /* Transition for input focus effect */
 }
 
 input:focus {
     border-color: #3498db;
     outline: none;
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.5); /* Shadow effect on focus */
 }
 
 button {
@@ -90,11 +94,25 @@ button {
     color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s; /* Add transform transition */
 }
 
+/* Enhanced button hover effect */
 button:hover {
     background-color: #218838;
+    transform: translateY(-2px); /* Button lift effect */
+}
+
+button:active {
+    transform: translateY(0); /* Reset position on click */
+}
+
+/* Styling for the Lost and Found Section */
+.lost-and-found {
+    background-color: #e7f4e4; /* Light green background */
+    border: 1px solid #d4edda; /* Border color */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
 }
 
 #lost-found-items {
@@ -105,3 +123,29 @@ button:hover {
     background-color: #f9f9f9;
 }
 
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    input, button {
+        font-size: 14px; /* Smaller font size for inputs and buttons */
+    }
+
+    button {
+        padding: 10px; /* Reduce button padding */
+    }
+
+    table {
+        font-size: 14px; /* Adjust table font size */
+    }
+}

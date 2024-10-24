@@ -259,6 +259,13 @@ button:active {
         width: 40px;
         height: 40px;
     }
+
+    .back-to-top{
+        bottom: 20px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+    }
 }
 
 .crew-management {
@@ -405,6 +412,14 @@ button:active {
 
 .theme-toggle:hover {
     transform: scale(1.1);
+}
+
+.back-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    cursor: pointer;
 }
 
 /* Dark mode styles */

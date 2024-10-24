@@ -132,3 +132,24 @@ document.getElementById('feedback-form').addEventListener('submit', function (e)
     document.getElementById('user-name').value = '';
     document.getElementById('feedback-message').value = '';
 });
+
+
+/****************************************************************************************
+ * FUNCTIONALITY TO SHOW UP/Disappear `Back to Top` button || 24-10-2024 Aqib Ali Mughal
+ * ***************************************************************************************/
+
+const backToTopButton = document.getElementById('back-to-top');
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+};
+
+backToTopButton.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});

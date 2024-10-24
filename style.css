@@ -454,4 +454,7 @@ body.dark-mode {
 #back-to-top:hover {
     background-color: #1abc9c;
 }
-
+/* Optional styling for collapsible section */
+h2 {
+    cursor: pointer;
+}

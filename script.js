@@ -141,3 +141,11 @@ window.onscroll = function() {
         document.getElementById('back-to-top').style.display = 'none';
     }
 };
+function toggleRoutes() {
+    const routesList = document.getElementById('bus-routes-list');
+    if (routesList.style.display === 'none') {
+        routesList.style.display = 'block';
+    } else {
+        routesList.style.display = 'none';
+    }
+}

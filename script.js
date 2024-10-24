@@ -10,7 +10,7 @@ document.getElementById('add-bus-form').addEventListener('submit', function (e) 
     newRow.innerHTML = `<td>${busNumber}</td>
                         <td>${busRoute}</td>
                         <td>${departureTime}</td>
-                        <td><button class="remove-btn">Remove</button></td>`;
+                        <td><button class="remove-btn"><i class="fas fa-trash-alt"></i> Remove</button></td>`;
     
     // Add the new row to the bus timings table
     document.querySelector('#bus-timings tbody').appendChild(newRow);
@@ -23,7 +23,7 @@ document.getElementById('add-bus-form').addEventListener('submit', function (e) 
 
 // Event delegation for removing buses
 document.querySelector('#bus-timings tbody').addEventListener('click', function (e) {
-    if (e.target.classList.contains('remove-btn')) {
+    if (e.target.classList.contains('remove-btn') || e.target.closest('button').classList.contains('remove-btn')) {
         e.target.closest('tr').remove(); // Remove the corresponding row
     }
 });
@@ -36,7 +36,7 @@ document.getElementById('lost-found-form').addEventListener('submit', function (
     const contact = document.getElementById('contact').value;
     
     const lostFoundItemsDiv = document.getElementById('lost-found-items');
-    lostFoundItemsDiv.innerHTML += `<p><strong>${item}</strong> - Contact: ${contact}</p>`;
+    lostFoundItemsDiv.innerHTML += `<p><i class="fas fa-box-open"></i> <strong>${item}</strong> - Contact: ${contact}</p>`;
     
     // Clear the input fields
     document.getElementById('item').value = '';
@@ -75,7 +75,7 @@ document.getElementById('add-crew-form').addEventListener('submit', function (e)
     newRow.innerHTML = `<td>${crewName}</td>
                         <td>${crewRole}</td>
                         <td>${crewBusNumber}</td>
-                        <td><button class="remove-crew-btn">Remove</button></td>`;
+                        <td><button class="remove-crew-btn"><i class="fas fa-user-minus"></i> Remove</button></td>`;
 
     // Add the new row to the crew list table
     document.querySelector('#crew-list tbody').appendChild(newRow);
@@ -88,7 +88,7 @@ document.getElementById('add-crew-form').addEventListener('submit', function (e)
 
 // Event delegation for removing crew members
 document.querySelector('#crew-list tbody').addEventListener('click', function (e) {
-    if (e.target.classList.contains('remove-crew-btn')) {
+    if (e.target.classList.contains('remove-crew-btn') || e.target.closest('button').classList.contains('remove-crew-btn')) {
         e.target.closest('tr').remove(); // Remove the corresponding row
     }
 });
@@ -102,7 +102,7 @@ document.getElementById('emergency-form').addEventListener('submit', function (e
 
     const emergencyReportsDiv = document.getElementById('emergency-reports');
     const newReport = document.createElement('p');
-    newReport.innerHTML = `<strong>Emergency:</strong> ${emergencyDescription} - <strong>Contact:</strong> ${emergencyContact}`;
+    newReport.innerHTML = `<i class="fas fa-exclamation-triangle"></i> <strong>Emergency:</strong> ${emergencyDescription} - <strong>Contact:</strong> ${emergencyContact}`;
 
     // Add the new emergency report
     emergencyReportsDiv.appendChild(newReport);
@@ -110,4 +110,25 @@ document.getElementById('emergency-form').addEventListener('submit', function (e
     // Clear the input fields
     document.getElementById('emergency-description').value = '';
     document.getElementById('emergency-contact').value = '';
+});
+
+// User Feedback functionality
+document.getElementById('feedback-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const userName = document.getElementById('user-name').value;
+    const feedbackMessage = document.getElementById('feedback-message').value;
+
+    // Create a new feedback entry
+    const feedbackList = document.getElementById('feedback-list');
+    const newFeedback = document.createElement('div');
+    newFeedback.classList.add('feedback-entry');
+    newFeedback.innerHTML = `<i class="fas fa-comments"></i> <p><strong>${userName}</strong> says:</p><p>${feedbackMessage}</p>`;
+
+    // Add the new feedback entry to the feedback list
+    feedbackList.appendChild(newFeedback);
+
+    // Clear the input fields
+    document.getElementById('user-name').value = '';
+    document.getElementById('feedback-message').value = '';
 });

@@ -458,3 +458,25 @@ body.dark-mode {
 h2 {
     cursor: pointer;
 }
+@media print {
+    /* Hide elements that shouldn't appear in print */
+    button, input, form {
+        display: none;
+    }
+
+    /* Simplify table for printing */
+    table {
+        width: 100%;
+        border: 1px solid black;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid black;
+    }
+
+    body {
+        background-color: white;
+        color: black;
+    }
+}

@@ -437,3 +437,25 @@ body.dark-mode {
     background-color: #1abc9c;
 }
 
+.top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.top-btn:hover {
+    transform: scale(1.1); 
+}
+

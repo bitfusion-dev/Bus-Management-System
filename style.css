@@ -407,7 +407,3 @@ button:active {
     transform: scale(1.1);
 }
 
-.theme-toggle i {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-}

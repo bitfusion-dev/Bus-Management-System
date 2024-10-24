@@ -8,6 +8,7 @@ A simple web application for managing bus schedules, routes, and lost & found it
 - **View Bus Timings**: Display current bus schedules in a user-friendly table format.
 - **Remove Buses**: Dynamically remove buses from the schedule.
 - **Lost and Found Section**: Submit and view lost items along with contact information.
+- **Passenger Notifications**: Send alerts or notifications for delays, cancellations, or route changes.
 - **Responsive Design**: Accessible on both desktop and mobile devices.
 
 ## Tech Stack

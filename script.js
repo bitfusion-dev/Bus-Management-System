@@ -132,3 +132,20 @@ document.getElementById('feedback-form').addEventListener('submit', function (e)
     document.getElementById('user-name').value = '';
     document.getElementById('feedback-message').value = '';
 });
+
+
+window.onscroll = function() {
+    if (document.documentElement.scrollTop > 200) {
+        document.getElementById('back-to-top').style.display = 'block';
+    } else {
+        document.getElementById('back-to-top').style.display = 'none';
+    }
+};
+function toggleRoutes() {
+    const routesList = document.getElementById('bus-routes-list');
+    if (routesList.style.display === 'none') {
+        routesList.style.display = 'block';
+    } else {
+        routesList.style.display = 'none';
+    }
+}

@@ -437,3 +437,24 @@ body.dark-mode {
     background-color: #1abc9c;
 }
 
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#back-to-top:hover {
+    background-color: #1abc9c;
+}
+/* Optional styling for collapsible section */
+h2 {
+    cursor: pointer;
+}

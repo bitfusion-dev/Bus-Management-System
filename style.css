@@ -407,3 +407,33 @@ button:active {
     transform: scale(1.1);
 }
 
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+.dark-mode .container {
+    background-color: #34495e;
+}
+
+.dark-mode h1, .dark-mode h2 {
+    color: #ecf0f1;
+}
+
+.dark-mode table, .dark-mode th, .dark-mode td {
+    border-color: #7f8c8d;
+}
+
+.dark-mode th {
+    background-color: #1abc9c;
+}
+
+.dark-mode button {
+    background-color: #16a085;
+}
+
+.dark-mode button:hover {
+    background-color: #1abc9c;
+}
+
